@@ -24,6 +24,7 @@ var (
 		Use:   "serve",
 		Short: "starts the API server",
 		RunE: func(_ *cobra.Command, _ []string) error {
+			config
 			server := app.New()
 			return server.Start()
 		},
